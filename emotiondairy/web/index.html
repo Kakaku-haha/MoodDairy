@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <base href="$FLUTTER_BASE_HREF">
+
+  <meta charset="UTF-8">
+  <meta content="IE=Edge" http-equiv="X-UA-Compatible">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+  <meta name="description" content="暖迹 · 把心情轻轻留下。淡暖色调的情绪记录与觉察日记。">
+  <meta name="theme-color" content="#FBF6EF">
+  <meta name="format-detection" content="telephone=no">
+
+  <!-- iOS meta tags & icons -->
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+  <meta name="apple-mobile-web-app-title" content="暖迹">
+  <link rel="apple-touch-icon" href="icons/Icon-192.png">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="favicon.png"/>
+
+  <title>暖迹 · 情绪日记</title>
+  <link rel="manifest" href="manifest.json">
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      background: #FBF6EF;
+      overflow: hidden;
+    }
+    #splash {
+      position: fixed;
+      inset: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      gap: 16px;
+      background:
+        radial-gradient(circle at 80% 10%, rgba(233, 177, 131, 0.22), transparent 38%),
+        #FBF6EF;
+      color: #3F3631;
+      font-family: "PingFang SC", "Microsoft YaHei", "Noto Sans CJK SC", sans-serif;
+      z-index: 10;
+      transition: opacity 320ms ease;
+    }
+    #splash .sun {
+      width: 62px;
+      height: 62px;
+      border-radius: 22px;
+      background: linear-gradient(145deg, #C98363, #B36A4E);
+      color: #FFFDF9;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 28px;
+      font-weight: 600;
+      box-shadow: 0 12px 30px rgba(179, 106, 78, 0.25);
+      animation: breathe 1.8s ease-in-out infinite;
+    }
+    #splash .name {
+      font-size: 17px;
+      letter-spacing: 5px;
+      margin-left: 5px;
+    }
+    #splash .hint {
+      font-size: 10px;
+      letter-spacing: 1.4px;
+      color: #97877C;
+    }
+    @keyframes breathe {
+      0%, 100% { transform: scale(1); }
+      50% { transform: scale(1.05); }
+    }
+  </style>
+</head>
+<body>
+  <div id="splash">
+    <div class="sun">暖</div>
+    <div class="name">暖迹</div>
+    <div class="hint">把心情，轻轻留下</div>
+  </div>
+
+  <script>
+    window.addEventListener('flutter-first-frame', function () {
+      const splash = document.getElementById('splash');
+      if (!splash) return;
+      splash.style.opacity = '0';
+      setTimeout(() => splash.remove(), 340);
+    });
+  </script>
+  <script src="flutter_bootstrap.js" async></script>
+</body>
+</html>

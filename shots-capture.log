@@ -1,0 +1,17 @@
+﻿booted=True after 70s
+size=Physical size: 1080x2400
+Override size: 1080x1920
+Performing Streamed Install
+Success
+shot empty-01-home : 56994 bytes
+shot empty-02-trends : 56994 bytes
+shot empty-03-history : 246366 bytes
+shot empty-04-profile : 230741 bytes
+copy: 
+prefs size: 3141 shared_prefs/FlutterSharedPreferences.xml
+shot 01-home : 266400 bytes
+shot 02-trends : 159499 bytes
+shot 03-history : 142545 bytes
+shot 04-profile : 231697 bytes
+--- flutter logcat ---
+

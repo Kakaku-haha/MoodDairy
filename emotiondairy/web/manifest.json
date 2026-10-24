@@ -1,0 +1,36 @@
+{
+    "name": "暖迹 · 情绪日记",
+    "short_name": "暖迹",
+    "start_url": ".",
+    "display": "standalone",
+    "background_color": "#FBF6EF",
+    "theme_color": "#FBF6EF",
+    "description": "把心情轻轻留下。淡暖色调的情绪记录与觉察日记。",
+    "lang": "zh-CN",
+    "orientation": "portrait-primary",
+    "prefer_related_applications": false,
+    "icons": [
+        {
+            "src": "icons/Icon-192.png",
+            "sizes": "192x192",
+            "type": "image/png"
+        },
+        {
+            "src": "icons/Icon-512.png",
+            "sizes": "512x512",
+            "type": "image/png"
+        },
+        {
+            "src": "icons/Icon-maskable-192.png",
+            "sizes": "192x192",
+            "type": "image/png",
+            "purpose": "maskable"
+        },
+        {
+            "src": "icons/Icon-maskable-512.png",
+            "sizes": "512x512",
+            "type": "image/png",
+            "purpose": "maskable"
+        }
+    ]
+}
