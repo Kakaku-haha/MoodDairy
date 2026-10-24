@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>暖迹 隐私政策</title>
+<meta name="description" content="暖迹（WarmTrace）隐私政策：纯本地存储的情绪日记，不收集、不上传任何个人信息。">
+<style>
+  :root {
+    --bg: #FBF6EF;
+    --surface: #FFFCF8;
+    --ink: #3F3631;
+    --ink-soft: #6E6159;
+    --muted: #97877C;
+    --line: #EDE2D6;
+    --primary: #B96F52;
+    --primary-deep: #9C573E;
+    --primary-soft: #F4DFD3;
+    --sage: #87937A;
+    --sage-soft: #E9EDE3;
+  }
+  * { box-sizing: border-box; }
+  html { -webkit-text-size-adjust: 100%; }
+  body {
+    margin: 0;
+    padding: 40px 20px 72px;
+    background: radial-gradient(120% 80% at 85% -10%, #F9E8D8 0%, rgba(249,232,216,0) 55%), var(--bg);
+    color: var(--ink);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC",
+      "Hiragino Sans GB", "Microsoft YaHei", "Source Han Sans SC", sans-serif;
+    font-size: 15px;
+    line-height: 1.85;
+  }
+  .wrap { max-width: 760px; margin: 0 auto; }
+  header { margin-bottom: 28px; }
+  .brand { display: flex; align-items: center; gap: 12px; margin-bottom: 22px; }
+  .mark {
+    width: 46px; height: 46px; flex: none; border-radius: 15px;
+    background: linear-gradient(135deg, #C98363, #B36A4E);
+    color: #fff; font-weight: 700; font-size: 21px; line-height: 46px;
+    text-align: center; position: relative;
+    box-shadow: 0 7px 16px rgba(185, 111, 82, .24);
+  }
+  .mark::after {
+    content: ""; position: absolute; top: 7px; right: 7px;
+    width: 6px; height: 6px; border-radius: 50%; background: #F5D2B4;
+  }
+  .brand-name { font-size: 19px; font-weight: 700; letter-spacing: .5px; }
+  .brand-sub { font-size: 12px; color: var(--muted); }
+  h1 { font-size: 30px; line-height: 1.3; margin: 0 0 12px; letter-spacing: -.4px; }
+  .meta { color: var(--muted); font-size: 12.5px; line-height: 1.9; }
+  .meta b { color: var(--ink-soft); font-weight: 600; }
+  .card {
+    background: var(--surface);
+    border: 1px solid var(--line);
+    border-radius: 22px;
+    padding: 22px 22px;
+    margin: 26px 0;
+    box-shadow: 0 10px 30px rgba(110, 74, 53, .05);
+  }
+  .summary { background: linear-gradient(135deg, #FDF1E7, #FAE7DC); border-color: #F2DFD2; }
+  .summary h2 { margin-top: 0; }
+  .summary p { margin: 0; font-size: 15.5px; color: #5C4A40; }
+  h2 {
+    font-size: 19px; margin: 36px 0 12px; letter-spacing: -.2px;
+    padding-left: 12px; border-left: 3px solid var(--primary);
+  }
+  h3 { font-size: 15.5px; margin: 22px 0 8px; color: var(--ink-soft); }
+  p { margin: 10px 0; color: var(--ink-soft); }
+  ul { margin: 10px 0; padding-left: 20px; color: var(--ink-soft); }
+  li { margin: 5px 0; }
+  strong { color: var(--ink); font-weight: 600; }
+  code {
+    background: var(--primary-soft); color: var(--primary-deep);
+    padding: 1px 6px; border-radius: 6px; font-size: .88em;
+    font-family: "SF Mono", Consolas, "Courier New", monospace;
+  }
+  table {
+    width: 100%; border-collapse: separate; border-spacing: 0;
+    margin: 14px 0; font-size: 13.5px;
+    border: 1px solid var(--line); border-radius: 14px; overflow: hidden;
+  }
+  th, td { padding: 10px 12px; text-align: left; vertical-align: top; border-bottom: 1px solid var(--line); }
+  th { background: #F7EDE3; color: var(--ink); font-weight: 600; white-space: nowrap; }
+  tr:last-child td { border-bottom: none; }
+  td { color: var(--ink-soft); }
+  tbody td:first-child { white-space: nowrap; }
+  .no { color: var(--sage); font-weight: 600; }
+  .yes { color: var(--primary-deep); font-weight: 600; }
+  .fill { background: #FDF0D5; border-radius: 6px; padding: 1px 6px; color: #8A5A00; font-weight: 600; }
+  footer {
+    margin-top: 44px; padding-top: 18px; border-top: 1px solid var(--line);
+    color: var(--muted); font-size: 12.5px;
+  }
+  a { color: var(--primary-deep); }
+  @media (max-width: 520px) {
+    body { padding: 24px 14px 56px; font-size: 14.5px; }
+    h1 { font-size: 25px; }
+    th, td { padding: 9px 10px; }
+    table { font-size: 12.8px; }
+  }
+  @media print {
+    body { background: #fff; padding: 0; font-size: 11pt; }
+    .card, table { box-shadow: none; }
+    h2 { page-break-after: avoid; }
+    table { page-break-inside: avoid; }
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header>
+    <div class="brand">
+      <div class="mark">暖</div>
+      <div>
+        <div class="brand-name">暖迹</div>
+        <div class="brand-sub">把心情，轻轻留下</div>
+      </div>
+    </div>
+    <h1>隐私政策</h1>
+    <div class="meta">
+      <b>生效日期：</b>2026 年 10 月 24 日　·　<b>更新日期：</b>2026 年 10 月 24 日<br>
+      <b>适用版本：</b>暖迹 Android v1.0.0（应用包名 <code>com.example.emotiondairy</code>）
+    </div>
+  </header>
+
+  <div class="card summary">
+    <h2 style="border:none;padding:0;">一句话说明</h2>
+    <p>暖迹是一款<strong>纯本地</strong>的情绪日记。你写下的心情分数、文字和标签只保存在你自己的手机上，<strong>不会上传，我们和任何第三方都看不到</strong>。应用没有账号体系，也没有联网功能。</p>
+  </div>
+
+  <h2>一、我们处理哪些信息</h2>
+  <p>你在应用内<strong>主动填写</strong>的以下内容，仅在你的设备本地处理与保存：</p>
+  <table>
+    <thead>
+      <tr><th>信息类型</th><th>具体内容</th><th>是否上传</th><th>用途</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>情绪记录</td><td>−5 到 +5 的心情分数、记录时间、记录类型（此刻 / 今日总结）</td><td class="no">否</td><td>在你的设备上生成日历、趋势与统计</td></tr>
+      <tr><td>文字备注（选填）</td><td>你写下的感受文字</td><td class="no">否</td><td>仅本地展示</td></tr>
+      <tr><td>情绪标签（选填）</td><td>工作、家人、睡眠等标签</td><td class="no">否</td><td>仅本地统计常用标签</td></tr>
+      <tr><td>自我照顾勾选</td><td>某天某个小任务的完成状态</td><td class="no">否</td><td>仅本地展示完成情况</td></tr>
+    </tbody>
+  </table>
+  <p>其中，「情绪记录」与「文字备注」可能反映你的身心状态。按照《个人信息保护法》，这类信息属于<strong>敏感个人信息</strong>。暖迹对它的处理方式是：<strong>只在你的设备本地保存，不上传、不共享、不用于任何其他目的</strong>。</p>
+  <p><strong>我们不收集</strong>：姓名、手机号、邮箱、身份证件、位置、通讯录、相册、摄像头、麦克风、设备标识符（IMEI / IMSI / MAC / OAID / Android ID 等）、剪贴板内容、已安装应用列表、传感器数据、崩溃日志、使用行为埋点。</p>
+
+  <h2>二、系统权限</h2>
+  <ul>
+    <li>应用<strong>不申请任何运行时权限</strong>（不申请存储、相机、麦克风、位置、通讯录、通知等）。</li>
+    <li>发布的 APK <strong>不包含 <code>INTERNET</code>（联网）权限</strong>。这是系统级的限制：即使代码想上传数据，Android 也会拒绝，因此你的记录在技术上无法离开这台设备。</li>
+  </ul>
+
+  <h2>三、信息的存储</h2>
+  <ul>
+    <li><strong>存储位置</strong>：仅保存在本机应用私有目录（Android <code>SharedPreferences</code>，文件 <code>FlutterSharedPreferences.xml</code>），由系统应用沙箱保护，其他应用无法读取。</li>
+    <li><strong>保存期限</strong>：直到你在应用内删除，或卸载应用。</li>
+    <li><strong>不做云端备份</strong>，<strong>不做跨设备同步</strong>，<strong>不在服务器留存任何数据</strong>。</li>
+    <li>由于数据不出境、不上传，不存在个人信息跨境传输的情形。</li>
+  </ul>
+
+  <h2>四、共享、转让与公开披露</h2>
+  <p>我们<strong>不共享、不转让、不公开披露</strong>你的任何信息——因为我们在技术上无法接触这些数据。应用内没有广告 SDK、统计 SDK、推送 SDK 或其他会外发数据的组件。</p>
+
+  <h2>五、第三方组件</h2>
+  <table>
+    <thead><tr><th>组件</th><th>作用</th><th>是否外发数据</th></tr></thead>
+    <tbody>
+      <tr><td>Flutter 引擎（含 <code>flutter_localizations</code>）</td><td>界面渲染与中文本地化</td><td class="no">否</td></tr>
+      <tr><td><code>shared_preferences</code></td><td>读写本机键值存储</td><td class="no">否</td></tr>
+    </tbody>
+  </table>
+  <p>除上述组件外，应用没有其他第三方依赖。</p>
+
+  <h2>六、你的权利</h2>
+  <table>
+    <thead><tr><th>权利</th><th>如何行使</th></tr></thead>
+    <tbody>
+      <tr><td>查看</td><td>在「首页」「趋势」「时光」页面直接浏览</td></tr>
+      <tr><td>导出</td><td>「我的小屋」→「复制我的日记」，生成 JSON 到系统剪贴板，由你自行粘贴保存（应用不读取剪贴板）</td></tr>
+      <tr><td>删除单条</td><td>在记录上进入编辑 → 删除</td></tr>
+      <tr><td>删除全部</td><td>「我的小屋」→「清空全部记录」，立即生效且不可恢复</td></tr>
+      <tr><td>撤回同意 / 注销</td><td>应用无需注册；卸载应用即清除全部数据</td></tr>
+    </tbody>
+  </table>
+  <p>以上操作全部在本地即时完成，无需向我们提交申请。</p>
+
+  <h2>七、未成年人保护</h2>
+  <p>暖迹不面向 14 周岁以下儿童，也不会收集其个人信息。若你未满 18 周岁，请在监护人指导下使用本应用。</p>
+
+  <h2>八、数据安全</h2>
+  <ul>
+    <li>记录存放在应用私有目录，依赖 Android 应用沙箱与设备文件加密保护；我们没有额外加密存储内容（因为仅本机可读）。</li>
+    <li>建议为手机设置锁屏密码，避免他人直接查看你的记录。</li>
+    <li>若设备丢失且未设锁屏，本地记录可能被物理接触者读取——这是所有纯本地应用的共同边界。</li>
+    <li>我们没有服务器，因此不存在「服务器数据泄露」的风险。</li>
+  </ul>
+
+  <h2>九、健康免责声明</h2>
+  <p>暖迹不是医疗器械，不提供疾病诊断或治疗建议。「快乐度」是依据你自评分计算的统计值，不构成心理健康评估结论。</p>
+  <p>如果情绪低落持续两周以上，或已经影响到饮食、睡眠和日常生活，请尝试告诉信任的人，或寻求专业心理支持。</p>
+
+  <h2>十、本政策的更新</h2>
+  <p>当应用版本、功能或数据处理方式发生变化（尤其是引入联网、账号体系或第三方 SDK）时，我们会更新本政策，并在应用内或发布页面显著提示。重大变更会单独说明。</p>
+
+  <h2>十一、联系我们</h2>
+  <ul>
+    <li><strong>开发者：</strong><span class="fill">【开发者名称】</span></li>
+    <li><strong>联系邮箱：</strong><span class="fill">【联系邮箱】</span></li>
+    <li><strong>响应时限：</strong>收到与你个人信息相关的请求后，我们会在 15 个工作日内答复。</li>
+  </ul>
+
+  <footer>
+    本政策自 2026 年 10 月 24 日起生效。　·　暖迹 v1.0.0
+  </footer>
+
+</div>
+</body>
+</html>

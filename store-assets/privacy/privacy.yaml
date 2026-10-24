@@ -1,0 +1,75 @@
+# 暖迹 隐私政策 · 结构化摘要
+# 供应用商店提交表单、隐私清单核对或 CI 校验使用。
+# 正文条款以 PRIVACY.md / privacy.html 为准，本文件只是同一事实的机器可读版本。
+
+app:
+  name: 暖迹
+  name_en: WarmTrace
+  package: com.example.emotiondairy
+  platform: android
+  version: 1.0.0
+
+policy:
+  version: "1.0"
+  language: zh-CN
+  effective_date: "2026-10-24"
+  last_updated: "2026-10-24"
+  # 部署到可公开访问的地址后填入，例如 https://example.com/warmtrace/privacy.html
+  url: ""
+  documents:
+    - PRIVACY.md
+    - privacy.html
+
+data_practices:
+  collects_personal_data: false      # 开发者不收集任何个人信息
+  uploads_to_server: false           # 无服务端，无上传
+  sells_or_shares_data: false
+  uses_ads: false
+  uses_analytics: false
+  uses_tracking: false
+  uses_crash_reporting: false
+  cross_border_transfer: false
+  account_required: false
+
+local_storage:
+  location: android_shared_preferences
+  file: FlutterSharedPreferences.xml
+  encrypted_by_app: false            # 依赖系统沙箱与设备加密
+  items:
+    - key: warmtrace.entries.v1
+      description: 情绪记录（分数、时间、类型、备注、标签）
+      contains_sensitive_data: true  # 可能涉及身心状态
+      leaves_device: false
+    - key: warmtrace.done_tasks.v1
+      description: 自我照顾任务的完成状态
+      contains_sensitive_data: false
+      leaves_device: false
+
+permissions:
+  android: []                        # 未申请任何运行时权限
+  internet_permission: false         # APK 不含 INTERNET 权限
+  ios: []
+
+third_party_sdks:
+  - name: Flutter engine
+    purpose: 界面渲染与本地化
+    sends_data: false
+  - name: shared_preferences
+    purpose: 本机键值存储
+    sends_data: false
+
+user_rights:
+  access: 应用内直接查看
+  export: 我的小屋 → 复制我的日记（JSON 到剪贴板）
+  delete_single: 记录编辑 → 删除
+  delete_all: 我的小屋 → 清空全部记录
+  withdraw_consent: 卸载应用
+  response_time_business_days: 15
+
+children:
+  targeted_at_children_under_14: false
+  collects_children_data: false
+
+contact:
+  developer: ""                      # 填写开发者/公司全称
+  email: ""                          # 填写可公开的联系邮箱

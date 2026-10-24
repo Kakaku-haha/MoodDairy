@@ -174,7 +174,9 @@ flutter test
 
 ## 隐私
 
-所有数据仅写入设备本地 `SharedPreferences`。应用没有账号体系、网络请求和埋点。
+所有数据仅写入设备本地 `SharedPreferences`。应用没有账号体系、网络请求和埋点，APK 也不包含 `INTERNET` 权限。
+
+完整的隐私政策（可直接用于应用商店提交）见 [store-assets/privacy/](../store-assets/privacy/)：`PRIVACY.md`、`privacy.html`（可托管）、`privacy.pdf`、`privacy.yaml`（结构化摘要）。
 
 如果情绪低落持续两周以上，或已经影响进食、睡眠和日常生活，请尝试告诉信任的人，或寻求专业心理支持。暖迹不能替代心理咨询或医疗诊断。
 
